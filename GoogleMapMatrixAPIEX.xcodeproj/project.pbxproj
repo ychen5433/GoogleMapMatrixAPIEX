@@ -15,6 +15,7 @@
 		4A7B757A1F49D9AA00C1FBE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B75781F49D9AA00C1FBE2 /* LaunchScreen.storyboard */; };
 		4A7B75851F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B75841F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEXTests.swift */; };
 		4A7B75901F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B758F1F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEXUITests.swift */; };
+		4A7B759E1F4A5A3800C1FBE2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B759D1F4A5A3800C1FBE2 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4A7B758B1F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleMapMatrixAPIEXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7B758F1F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapMatrixAPIEXUITests.swift; sourceTree = "<group>"; };
 		4A7B75911F49D9AA00C1FBE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A7B759D1F4A5A3800C1FBE2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		4A7B756B1F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEX */ = {
 			isa = PBXGroup;
 			children = (
+				4A7B759D1F4A5A3800C1FBE2 /* SwiftyJSON.swift */,
 				4A7B756C1F49D9AA00C1FBE2 /* AppDelegate.swift */,
 				4A7B756E1F49D9AA00C1FBE2 /* ViewController.swift */,
 				4A7B75701F49D9AA00C1FBE2 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				4A7B756F1F49D9AA00C1FBE2 /* ViewController.swift in Sources */,
 				4A7B75751F49D9AA00C1FBE2 /* GoogleMapMatrixAPIEX.xcdatamodeld in Sources */,
 				4A7B756D1F49D9AA00C1FBE2 /* AppDelegate.swift in Sources */,
+				4A7B759E1F4A5A3800C1FBE2 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

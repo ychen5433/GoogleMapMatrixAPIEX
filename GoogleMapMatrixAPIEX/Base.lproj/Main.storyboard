@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleMapMatrixAPIEX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Origin" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Jct-jE-x4h">
+                                <rect key="frame" x="16" y="128" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nIU-sl-dmK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9tW-lj-BKz">
+                                <rect key="frame" x="16" y="193" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="h2r-d8-Sfc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DX-TV-G2y">
+                                <rect key="frame" x="99" y="490" width="167" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lK4-NS-EUg"/>
+                                </constraints>
+                                <state key="normal" title="Get Mileage"/>
+                                <connections>
+                                    <action selector="getMiles:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WvM-zC-Ln2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjX-hF-3sH">
+                                <rect key="frame" x="16" y="309" width="343" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrY-KV-omz">
+                                <rect key="frame" x="321" y="238" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addDestination:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P79-7d-DPJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9tW-lj-BKz" firstAttribute="trailing" secondItem="wjX-hF-3sH" secondAttribute="trailing" id="1iN-ae-Bbd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5DX-TV-G2y" secondAttribute="bottom" constant="147" id="7hs-Uo-3hl"/>
+                            <constraint firstItem="wjX-hF-3sH" firstAttribute="top" secondItem="9tW-lj-BKz" secondAttribute="bottom" constant="86" id="8lk-Vw-fUd"/>
+                            <constraint firstItem="9tW-lj-BKz" firstAttribute="top" secondItem="Jct-jE-x4h" secondAttribute="bottom" constant="35" id="FKq-6W-Mjs"/>
+                            <constraint firstItem="Jct-jE-x4h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GAW-FC-7GG"/>
+                            <constraint firstItem="5DX-TV-G2y" firstAttribute="top" secondItem="wjX-hF-3sH" secondAttribute="bottom" constant="81" id="It9-jz-g82"/>
+                            <constraint firstItem="Jct-jE-x4h" firstAttribute="leading" secondItem="9tW-lj-BKz" secondAttribute="leading" id="ODP-X3-A99"/>
+                            <constraint firstItem="Jct-jE-x4h" firstAttribute="trailing" secondItem="9tW-lj-BKz" secondAttribute="trailing" id="Sgn-gc-HZR"/>
+                            <constraint firstItem="9tW-lj-BKz" firstAttribute="leading" secondItem="wjX-hF-3sH" secondAttribute="leading" id="UDW-II-lCE"/>
+                            <constraint firstItem="5DX-TV-G2y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="83" id="adc-72-J9Q"/>
+                            <constraint firstItem="Jct-jE-x4h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="ffD-IZ-1ti"/>
+                            <constraint firstItem="Jct-jE-x4h" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pQA-0f-oZf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5DX-TV-G2y" secondAttribute="trailing" constant="93" id="uBc-dG-oTc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="destination" destination="9tW-lj-BKz" id="oVW-cu-XBm"/>
+                        <outlet property="displayLb" destination="wjX-hF-3sH" id="xej-iM-xMr"/>
+                        <outlet property="origin" destination="Jct-jE-x4h" id="uk2-fz-swJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
